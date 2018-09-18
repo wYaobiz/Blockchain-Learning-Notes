@@ -1,0 +1,59 @@
+# L3 Verify Message Signature
+## Sign and verify a Message 
+### Why sign and verify messages?
+Signing a transaction help prove ownership of these transactions and prove that transaction and blockchain identity were not tampered with. It allows us to trust the validity of data saved on a blockchain and the validity of users interacting with it.
+A digital signature ensures:
+	- **Authentication** - A valid digital signature proves to the recipient of the message that the message was sent by a known sender. 
+	- **Integrity** - The recipient and sender can prove the message was not altered in transaction. 
+	- **Non-repudiation** - The message sender cannot deny sending the message. 
+
+### How does signing and verification work?
+3 steps to sign and verify a message. 
+	1. Generate a private key and wallet address
+	2. Sign a message using the wallet address
+	3. Verify the message using the address and the signature 
+
+![](L3%20Verify%20Message%20Signature/5DA820F3-91A4-43A7-B4BB-C5BA6F868DCF.png)
+
+### Step 2: Sign a message 
+To sign a message, the private key and message are passed through a signing algorithm which produces a unique digital signature. If anything in the process, the private key, wallet address, signature, message/transaction algorithms, were altered in the process, a different digital signature would be produced making it apparent something went wrong.
+**Signing the message produces a unique digital signature.**
+
+**An example, in Javascript**
+```
+// Setup libraries
+const bitcoin = require('bitcoinjs-lib')
+const bitcoinMessage = require('bitcoinjs-message')
+...
+
+// Given the message and private key, sign a Bitcoin message
+var signature = bitcoinMessage.sign(message, privateKey, keyPair.compressed)
+
+// Print out the signature
+console.log(signature.toString('base64'))
+// => 'G9L5yLFjti0QTHhPyFrZCT1V/MMnBtXKmoiKDZ78NDBjERki6ZTQZdSMCtkgoNmp17By9ItJr8o7ChX0XxY91nk='
+```
+
+
+### Step 3: Verify a Message 
+There are existing Verification Algorithms that will take in a Wallet Address, the Signature, and a Transaction, and verify whether or not the given Wallet Address was used to sign the given Transaction (or Message).
+
+**An example, in Javascript**
+```
+// Setup libraries
+const bitcoin = require('bitcoinjs-lib')
+const bitcoinMessage = require('bitcoinjs-message')
+
+
+// Verify a Bitcoin message
+const address = '1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN'
+
+const signature = 'HJLQlDWLyb1Ef8bQKEISzFbDAKctIlaqOpGbrk3YVtRsjmC61lpE5ErkPRUFtDKtx98vHFGUWlFhsh3DiW6N0rE'
+
+const message = 'This is an example of a signed message.'
+
+console.log(bitcoinMessage.verify(message,address,signature));
+```
+
+
+![](L3%20Verify%20Message%20Signature/C81922C2-AB68-4706-AFB8-92DB86D0DB52.png)
