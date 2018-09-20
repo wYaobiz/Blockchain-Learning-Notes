@@ -20,7 +20,7 @@ To sign a message, the private key and message are passed through a signing algo
 **Signing the message produces a unique digital signature.**
 
 **An example, in Javascript**
-```
+```javascript
 // Setup libraries
 const bitcoin = require('bitcoinjs-lib')
 const bitcoinMessage = require('bitcoinjs-message')
@@ -39,7 +39,7 @@ console.log(signature.toString('base64'))
 There are existing Verification Algorithms that will take in a Wallet Address, the Signature, and a Transaction, and verify whether or not the given Wallet Address was used to sign the given Transaction (or Message).
 
 **An example, in Javascript**
-```
+```javascript
 // Setup libraries
 const bitcoin = require('bitcoinjs-lib')
 const bitcoinMessage = require('bitcoinjs-message')
