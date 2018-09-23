@@ -5,3 +5,4 @@
 	- [1.3 Verify Message Signature](L1.3%20Verify%20Message%20Signature.md)
 2. Blockchain Data 
 	- [2.1 Blockchain Data Overview](L2.1%20Blockchain%20Data%20Overview.md)
+	- [2.2 Bitcoin Core Testnet](L2.2%20Bitcoin%20Core%20Testnet.md)
