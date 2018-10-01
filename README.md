@@ -6,4 +6,4 @@
 2. Blockchain Data 
 	- [2.1 Blockchain Data Overview](L2.1%20Blockchain%20Data%20Overview.md)
 	- [2.2 Bitcoin Core Testnet](L2.2%20Bitcoin%20Core%20Testnet.md)
-	- [2.3 Bitcoin Debug Console](L2.3%20Bitcoin%20Debug%20Console)
+	- [2.3 Bitcoin Debug Console](L2.3%20Bitcoin%20Debug%20Console.md)
