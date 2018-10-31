@@ -10,3 +10,4 @@
 	- [2.4 Blockchain Data](L2.4%20Blockchain%20Data.md)
 3. Identity and Smart Contracts
 	- [3.1 Introduction to Ethereum](L3.1%20Introduction%20to%20Ethereum.md)
+	- [3.2 Smart Contracts and Solidity](L3.2%20Smart%20Contracts%20and%20Solidity.md)
